@@ -41,7 +41,8 @@ public class Main
         int y1=input.nextInt();
         Coordinates coordinates=new Coordinates(x,y);
         Check check=new Check();
-        LOGGER.info(String.valueOf(check.check(x,y,x1,y1)));
+        String checkValue=String.valueOf(check.check(x,y,x1,y1));
+        LOGGER.info(checkValue);
         Coordinates cloneObject=(Coordinates)coordinates.clone();
         cloneObject.x=x1;
         cloneObject.y=y1;
@@ -49,9 +50,5 @@ public class Main
         String cloneValue="Cloned Coordinates of X and Y  is X:"+cloneObject.x+" Y:"+cloneObject.y;
         LOGGER.info(original);
         LOGGER.info(cloneValue);
-        
-
-
-
     }
 }
