@@ -3,7 +3,8 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 class Coordinates implements Cloneable
 {
-    int x,y;
+    int x;
+    int y;
 
      Coordinates(int x,int y)
      {
@@ -44,8 +45,10 @@ public class Main
         Coordinates cloneObject=(Coordinates)coordinates.clone();
         cloneObject.x=x1;
         cloneObject.y=y1;
-        LOGGER.info("Orignial Coordinates of X and Y  is X value:"+coordinates.x+" Y Value:"+coordinates.y);
-        LOGGER.info("Cloned Coordinates of X and Y  is X value:"+cloneObject.x+" Y Value:"+cloneObject.y);
+        String original="Orignial Coordinates of X and Y  is X:"+coordinates.x+" Y:"+coordinates.y;
+        String cloneValue="Cloned Coordinates of X and Y  is X:"+cloneObject.x+" Y:"+cloneObject.y;
+        LOGGER.info(original);
+        LOGGER.info(cloneValue);
         
 
 
