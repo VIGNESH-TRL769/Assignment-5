@@ -54,7 +54,7 @@ public class Main
             LOGGER.info(cloneValue);
         } catch(Exception e)
         {
-            String value = "Please Enter Valid Numbers:" + e;
+            String value = "Please Enter Validate Inputs:" + e;
             LOGGER.info(value);
             input.nextLine();
         }
