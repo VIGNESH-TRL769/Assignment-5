@@ -30,9 +30,7 @@ public class Main
     public static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     public static void main(String[] args)  throws CloneNotSupportedException
     {
-        Scanner input = new Scanner(System.in);
-        try 
-        {
+            Scanner input = new Scanner(System.in);
             LOGGER.info("Enetr the X value:");
             int x = input.nextInt();
             LOGGER.info("Enter thr Y value:");
@@ -52,13 +50,5 @@ public class Main
             String cloneValue = "Cloned Coordinates of X and Y  is X:" + cloneObject.x + " Y:" + cloneObject.y;
             LOGGER.info(original);
             LOGGER.info(cloneValue);
-        } catch(Exception e)
-        {
-            String value = "Please Enter Validate Inputs:" + e;
-            LOGGER.info(value);
-            input.nextLine();
-        }
-
-
     }
 }
