@@ -1,7 +1,7 @@
 package org.example;
 import java.util.Scanner;
 import java.util.logging.Logger;
-class Coordinates implements Cloneable
+class Coordinates
 {
     int x;
     int y;
@@ -11,9 +11,10 @@ class Coordinates implements Cloneable
         this.x=x;
         this.y=y;
     }
-    public Object clone() throws CloneNotSupportedException
+    Coordinates(Coordinates object)
     {
-        return super.clone();
+        x=object.x;
+        y=object.y;
     }
 }
 class Check
@@ -28,7 +29,7 @@ class Check
 public class Main
 {
     public static final Logger LOGGER =  Logger.getLogger("InfoLogging");
-    public static void main(String[] args)  throws CloneNotSupportedException
+    public static void main(String[] args)
     {
             Scanner input = new Scanner(System.in);
             LOGGER.info("Enetr the X value:");
@@ -43,7 +44,7 @@ public class Main
             Check check = new Check();
             String checkValue = String.valueOf(check.check(x, y, x1, y1));
             LOGGER.info(checkValue);
-            Coordinates cloneObject = (Coordinates) coordinates.clone();
+            Coordinates cloneObject = new Coordinates(coordinates);
             cloneObject.x = x1;
             cloneObject.y = y1;
             String original = "Orignial Coordinates of X and Y  is X:" + coordinates.x + " Y:" + coordinates.y;
